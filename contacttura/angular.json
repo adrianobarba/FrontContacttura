@@ -24,7 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -89,7 +88,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -121,10 +119,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "contacttura",
-  "cli": {
-    "analytics": "420a053c-b96b-4529-a27e-724e59211d92"
-  }
+    }},
+  "defaultProject": "contacttura"
 }

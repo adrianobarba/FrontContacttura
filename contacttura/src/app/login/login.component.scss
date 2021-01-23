@@ -1,0 +1,41 @@
+    
+:host{
+    display: flex;
+    justify-content: center;
+    margin: 180px 0px;
+}
+
+.mat-form-field{
+    width: 100%;
+    min-width: 200px;
+}
+
+
+mat-card-content,
+mat-card-actions{
+      display: flex;
+    justify-content: center;
+}
+
+mat-card-title{
+    display: flex;
+    justify-content: center;
+    text-decoration:underline;
+}
+
+mat-card{
+    background-image: url('../../assets/img/backgrounnd-login.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: cadetblue;
+}
+
+.buttons-container{
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+
+

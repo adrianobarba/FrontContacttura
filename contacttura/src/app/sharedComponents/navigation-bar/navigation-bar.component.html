@@ -4,11 +4,11 @@
           <link rel="stylesheet" type="txt/scss" heref="estolo.scss"/> 
     </head> 
 <body>
-    <h1>NoobsFuctura</h1>
+   <h1>NoobsFuctura</h1>
     <div></div>
 
     <div id="color">
-    </div>
+    </div> 
     <!--Navegação-->
     <nav class="navbar">
         <!--Menu responsivo para Mobile-->
@@ -22,13 +22,13 @@
 <!--Lista de rotas do menu-->
 <ul class="main-nav" id="desktop-menu">
         <li>
-            <a href="#" class="nav-links">Contatos</a>
+            <a routerLink="/contacts-list" class="nav-links">Contatos</a>
+        </li>
+        <li *ngIf="admin != 'false'">
+            <a routerLink="/user-list" class="nav-links">Usuários</a>
         </li>
         <li>
-            <a href="#" class="nav-links">Usuários</a>
-        </li>
-        <li>
-            <a href="#" class="nav-links">Logout</a>
+            <a (click)="logout()" class="nav-links">Logout</a>
                 </li>
              </ul>
          </nav>  

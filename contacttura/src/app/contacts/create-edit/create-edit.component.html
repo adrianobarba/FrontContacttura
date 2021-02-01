@@ -1,5 +1,5 @@
 <app-navigation-bar></app-navigation-bar>
-<!-- Header do formulário de criação/edição de usuários -->
+<!-- Header do formulário de criaçõa/edição de usuários -->
 <section>
     <div class="title-new-contacts">
         <h1>
@@ -7,29 +7,32 @@
         </h1>
     </div>
 </section>
-<!-- Formulário para edição e criação de novo contato-->
+<!-- Formulário para edição e criação de novo contato -->
 <section>
     <form [formGroup]="createEditForm">
         <div class="grid-container">
             <div class="grid-item">
                 <mat-form-field class="example-full-width">
                     <mat-label>Nome</mat-label>
-                    <input matInput formControlName="nome">
-                </mat-form-field>
+                    <input matInput formControlName="name">
+                  </mat-form-field>
+            </div>
+            <div class="grid-item">
                 <mat-form-field class="example-full-width">
                     <mat-label>Phone</mat-label>
                     <input matInput formControlName="phone">
-                </mat-form-field>
+                  </mat-form-field>
             </div>
             <div class="grid-item">
                 <mat-form-field class="example-full-width">
                     <mat-label>Email</mat-label>
                     <input matInput formControlName="email">
-                </mat-form-field>
+                  </mat-form-field>
             </div>
         </div>
         <div class="grid-container-button button_primary_color">
-            <button mat-raised-button color="primary" (click)="createContact()">Novo Contato</button>
+            <button *ngIf="!edit" mat-raised-button color="primary" (click)="createContact()">Salvar Contato</button>
+            <button *ngIf="edit" mat-raised-button color="primary" (click)="editContact()">Editar Contato</button>
         </div>
-    </form>
+      </form>
 </section>

@@ -1,36 +1,26 @@
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-          <link rel="stylesheet" type="txt/scss" heref="estolo.scss"/> 
-    </head> 
 <body>
-   <h1>NoobsFuctura</h1>
-    <div></div>
-
-    <div id="color">
-    </div> 
-    <!--Navegação-->
+    <!-- Navegação -->
     <nav class="navbar">
-        <!--Menu responsivo para Mobile-->
+        <!-- Menu responsivo para Mobile -->
         <span class="navbar-toggle" id="toggle-action">
             <mat-icon>menu</mat-icon>
         </span>
 
-<!--Menu responsivo para web (Mninimo de 769px)-->
-<a class="logo"Logo></a>
+        <!-- Menu responsivo para web (Minimo de 769px) -->
+        <!-- <a class="logo">Logo</a> -->
+        <span class="font-style"><img class="logo_space logo" src="../../../assets/imgs/servico-24-horas-para-smartphones.svg">Contactura</span>
 
-<!--Lista de rotas do menu-->
-<ul class="main-nav" id="desktop-menu">
-        <li>
-            <a routerLink="/contacts-list" class="nav-links">Contatos</a>
-        </li>
-        <li *ngIf="admin != 'false'">
-            <a routerLink="/user-list" class="nav-links">Usuários</a>
-        </li>
-        <li>
-            <a (click)="logout()" class="nav-links">Logout</a>
-                </li>
-             </ul>
-         </nav>  
+        <!-- Lista de rotas do menu -->
+        <ul class="main-nav" id="desktop-menu">
+            <li>
+                <a routerLink="/contacts-list" class="nav-links">Contatos</a>
+            </li>
+            <li *ngIf="admin != 'false'">
+                <a routerLink="/user-list" class="nav-links">Usuários</a>
+            </li>
+            <li>
+                <a (click)="logout()" class="nav-links">Logout</a>
+            </li>
+        </ul>
+    </nav>
 </body>
-</html>

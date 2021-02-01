@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,12 +19,10 @@ export class NavigationBarComponent implements OnInit {
   putEvents(){
     const menuDesktop = document.getElementById('desktop-menu');
     const navBarToggle = document.getElementById('toggle-action');
-
-    //tslint:disable-next-line: onli-arrow-fictions
+    // tslint:disable-next-line: only-arrow-functions
     navBarToggle.addEventListener('click', function(){
       menuDesktop.classList.toggle('active');
-  });
-
+    });
   }
 
   logout(){

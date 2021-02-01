@@ -8,32 +8,33 @@ import { Observable } from 'rxjs';
 export class AuthGuard implements CanActivate {
   constructor(private router: Router){}
 
-
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | boolean {
-    if(localStorage.getItem('token') != null){
-        return true;
-    }else{
-      this.router.navigate(['/login']);
-    }    
-  }
-  
+      if(localStorage.getItem('token') != null){
+          return true;
+      }
+      else{
+        this.router.navigate(['/login']);
+      }
+  } 
 }
 
 @Injectable({
   providedIn: 'root'
 })
-
+// Guardião de rotas para administrador
 export class AuthAdminGuard implements CanActivate {
   constructor(private router: Router){}
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | boolean {
       if(localStorage.getItem('admin') == 'true' && localStorage.getItem('token') != null){
-        return true;
-      }else{
+          return true;
+      }
+      else{
         this.router.navigate(['/login']);
       }
-    }
+  } 
 }
+

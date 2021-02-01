@@ -1,24 +1,23 @@
-<!-- Seção de Login -->
+<!-- Seção de login -->
+<section>
     <mat-card>
         <mat-card-title>Login</mat-card-title>
         <mat-card-content>
-            <div>
-         <form [formGroup]="loginForm">
-            
-                 <mat-form-field class="mod-full-width">
-                     <input matInput placeholder="Username" type="text" formControlName="Username">
-                 </mat-form-field>
-
-                 <mat-form-field class="mod-full-width">
-                    <input matInput placeholder="Password" type="password" formControlName="password">
-                 </mat-form-field>
-            
-         </form>
-        </div>
-    </mat-card-content>
-
-    <mat-card-actions>
-           <button mat-raised-button color="primary" (click)="login()">Login</button>
-    </mat-card-actions>
-    
+            <form [formGroup]="loginForm">
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Username"
+                          type="text" formControlName="username">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Password"
+                         type="password" formControlName="password">
+                    </mat-form-field>
+                </div>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="button_primary_color buttons-container">
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+        </mat-card-actions>
     </mat-card>
+</section>
